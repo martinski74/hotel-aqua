@@ -70,7 +70,7 @@ function GalleryContent() {
   return (
     <>
       <h2>{titles[category] || t.gallery.title}</h2>
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
+      <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
         {categories.map((cat) => (
           <Link
             key={cat.key}
@@ -80,14 +80,16 @@ function GalleryContent() {
               backgroundColor: category === cat.key ? '#333' : '#ccc',
               color: 'white',
               textDecoration: 'none',
-              borderRadius: '4px',
+              borderRadius: '6px',
+              display: 'inline-flex',
+              alignItems: 'center',
             }}
           >
             {cat.label}
           </Link>
         ))}
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1rem' }}>
         {filteredImages.map((src, index) => (
           <Image
             key={index}

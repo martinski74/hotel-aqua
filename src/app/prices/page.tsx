@@ -79,7 +79,7 @@ export default function PricesPage() {
             <i className="fa fa-calendar-day text-orange-500"></i>
             {t.prices.dailyPrices}
           </h2>
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 bg-white shadow-lg">
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
                 <tr className="bg-gradient-to-r from-orange-50 to-yellow-50">
@@ -119,7 +119,7 @@ export default function PricesPage() {
             <i className="fa fa-tag text-orange-700"></i>
             {t.prices.packagePrices}
           </h2>
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 bg-white shadow-lg">
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
                 <tr className="bg-gradient-to-r from-orange-50 to-yellow-50">

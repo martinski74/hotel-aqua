@@ -24,10 +24,14 @@ main{
     float: left;
     padding: 0 20px 20px 0;
     border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
 .containt .right-pic{
     float: right;
     border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
 .about p::first-letter {
     font-size: 160%;
@@ -49,6 +53,7 @@ table{
 .table-wrap {
     border: 2px solid #fff;
     background: #fdf2da;
+    overflow-x: auto;
 }
 td:first-of-type{
    font-weight: bolder;
@@ -208,6 +213,23 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+    main{
+        padding: 16px;
+    }
+    .containt{
+        padding: 20px 16px 36px 16px;
+    }
+    .containt .left-pic,
+    .containt .right-pic{
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0 0 14px 0;
+        padding: 0;
+    }
+    .map{
+        width: 100%;
+    }
     .contacts {
         flex-direction: column;
     }
@@ -217,6 +239,9 @@ textarea.form-control {
     }
     .contact-form {
         padding: 15px;
+    }
+    .booking h3{
+        margin-bottom: 18px;
     }
 }
 
