@@ -17,6 +17,22 @@
     "opened": "The hotel has opened its doors in 2006 and everything in it is consistent with the comfortable stay of guests.",
     "staff": "Highly professional and qualified staff of hotel \"Aqua\" will make your stay more comfortable and pleasant!",
     "everyRoomHas": "EVERY ROOM HAS",
+    "bookNow": "Book now",
+    "offersDescription": "Check our latest seasonal offers and book your favorite room category for an unforgettable holiday.",
+    "badges": {
+      "nearBeach": "50m from the beach",
+      "familyFriendly": "Family friendly",
+      "freeWifi": "Free Wi-Fi"
+    },
+    "slider": {
+      "slideOneTitle": "Welcome to Hotel Aqua",
+      "slideOneText": "Enjoy a comfortable stay, sea breeze, and warm hospitality in the heart of Kiten.",
+      "slideTwoTitle": "Garden Restaurant \"Pri Martin\"",
+      "slideTwoText": "Taste local specialties in a cozy atmosphere with fresh ingredients and friendly service.",
+      "bookNow": "Book now",
+      "exploreHotel": "Explore hotel",
+      "exploreRestaurant": "Explore restaurant"
+    },
     "amenities": {
       "bathroom": "bathroom",
       "cableTv": "cable TV",

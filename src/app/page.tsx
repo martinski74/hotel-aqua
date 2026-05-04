@@ -11,43 +11,54 @@ export default function Home() {
     <>
       <SimpleSlider />
 
-      <div className="info">
-        <div>
-          <h2>{t.home.title}</h2>
-          <p>{t.home.description}</p>
-          <p>{t.home.opened}</p>
-          <p>{t.home.staff}</p>
-        </div>
-        <div className="room-info">
-          <h2>{t.home.everyRoomHas}</h2>
-          <ul>
-            <li><i className="fa fa-check-circle-o" aria-hidden="true"></i>{t.home.amenities.bathroom}</li>
-            <li><i className="fa fa-check-circle-o" aria-hidden="true"></i>{t.home.amenities.cableTv}</li>
-            <li><i className="fa fa-check-circle-o" aria-hidden="true"></i>{t.home.amenities.refrigerator}</li>
-            <li><i className="fa fa-check-circle-o" aria-hidden="true"></i>{t.home.amenities.airConditioner}</li>
-            <li><i className="fa fa-check-circle-o" aria-hidden="true"></i>{t.home.amenities.safe}</li>
-            <li><i className="fa fa-check-circle-o" aria-hidden="true"></i>{t.home.amenities.balconySeaView}</li>
-          </ul>
-        </div>
-        <div className="offers">
-          <h2><Link href="/promo">{t.home.topOffers}</Link></h2>
-        </div>
-      </div>
+      <section className="home-info-wrap">
+        <div className="home-info-grid">
+          <article className="home-card">
+            <h2>{t.home.title}</h2>
+            <p>{t.home.description}</p>
+            <p>{t.home.opened}</p>
+            <p>{t.home.staff}</p>
+            <div className="home-badges">
+              <span>{t.home.badges.nearBeach}</span>
+              <span>{t.home.badges.familyFriendly}</span>
+              <span>{t.home.badges.freeWifi}</span>
+            </div>
+          </article>
 
-      <div className="category-content">
-        <div>
+          <article className="home-card room-info">
+            <h2>{t.home.everyRoomHas}</h2>
+            <ul>
+              <li><i className="fa fa-check-circle" aria-hidden="true"></i>{t.home.amenities.bathroom}</li>
+              <li><i className="fa fa-check-circle" aria-hidden="true"></i>{t.home.amenities.cableTv}</li>
+              <li><i className="fa fa-check-circle" aria-hidden="true"></i>{t.home.amenities.refrigerator}</li>
+              <li><i className="fa fa-check-circle" aria-hidden="true"></i>{t.home.amenities.airConditioner}</li>
+              <li><i className="fa fa-check-circle" aria-hidden="true"></i>{t.home.amenities.safe}</li>
+              <li><i className="fa fa-check-circle" aria-hidden="true"></i>{t.home.amenities.balconySeaView}</li>
+            </ul>
+          </article>
+
+          <article className="home-card offers-card">
+            <h2>{t.home.topOffers}</h2>
+            <p>{t.home.offersDescription}</p>
+            <Link href="/booking" className="offers-cta">{t.home.bookNow}</Link>
+          </article>
+        </div>
+      </section>
+
+      <section className="category-content">
+        <Link href="/gallery?category=rooms" className="category-card">
           <Image src="/images/rooms/room3.jpg" alt="room" width={400} height={300} />
-          <p><Link href="/gallery?category=rooms">{t.home.rooms}</Link></p>
-        </div>
-        <div>
+          <span>{t.home.rooms}</span>
+        </Link>
+        <Link href="/gallery?category=restaurant" className="category-card">
           <Image src="/images/resataurant/BIG_hotel1.jpg" alt="Restaurant" width={400} height={300} />
-          <p><Link href="/gallery?category=restaurant">{t.home.restaurant}</Link></p>
-        </div>
-        <div>
+          <span>{t.home.restaurant}</span>
+        </Link>
+        <Link href="/gallery?category=kiten" className="category-card">
           <Image src="/images/kiten/kiten.jpg" alt="sea" width={400} height={300} />
-          <p><Link href="/gallery?category=kiten">{t.home.resort}</Link></p>
-        </div>
-      </div>
+          <span>{t.home.resort}</span>
+        </Link>
+      </section>
     </>
   );
 }

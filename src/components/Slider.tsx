@@ -2,11 +2,14 @@
 import React from "react";
 import Slider from "react-slick";
 import Link from 'next/link';
+import { useLanguage } from '@/i18n/LanguageContext';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../app/css/slider.css';
 
 const SimpleSlider = () => {
+  const { t } = useLanguage();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -28,9 +31,12 @@ const SimpleSlider = () => {
             style={{ backgroundImage: "url(/images/slider_pic.jpg)" }}
           >
             <div className="slider-content">
-              <h2>Добре дошли в хотел Aqua</h2>
-              <p>Насладете се на комфортна почивка и първокласно обслужване</p>
-              <Link href="/gallery?category=hotel" className="btn">Разгледайте хотела</Link>
+              <h2>{t.home.slider.slideOneTitle}</h2>
+              <p>{t.home.slider.slideOneText}</p>
+              <div className="slider-actions">
+                <Link href="/booking" className="btn btn-primary">{t.home.slider.bookNow}</Link>
+                <Link href="/gallery?category=hotel" className="btn btn-secondary">{t.home.slider.exploreHotel}</Link>
+              </div>
             </div>
           </div>
         </div>
@@ -40,9 +46,12 @@ const SimpleSlider = () => {
             style={{ backgroundImage: "url(/images/slider_pic1.jpg)" }}
           >
             <div className="slider-content">
-              <h2>Ресторант-градина „При Мартин“</h2>
-              <p>Опитайте нашите специалитети в приятна и уютна обстановка</p>
-              <Link href="/gallery?category=restaurant" className="btn">Разгледайте ресторанта</Link>
+              <h2>{t.home.slider.slideTwoTitle}</h2>
+              <p>{t.home.slider.slideTwoText}</p>
+              <div className="slider-actions">
+                <Link href="/booking" className="btn btn-primary">{t.home.slider.bookNow}</Link>
+                <Link href="/gallery?category=restaurant" className="btn btn-secondary">{t.home.slider.exploreRestaurant}</Link>
+              </div>
             </div>
           </div>
         </div>

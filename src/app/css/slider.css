@@ -15,9 +15,11 @@
 }
 
 .slider-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    background-color: rgba(15, 23, 42, 0.55);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 191, 36, 0.45);
+    max-width: 760px;
 }
 
 .slider-content h2 {
@@ -31,17 +33,34 @@
     margin-bottom: 1.5rem;
 }
 
+.slider-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
 .slider-content .btn {
-    padding: 10px 20px;
-    background-color: #f05200; /* Using the orange from the other CSS file */
+    padding: 10px 18px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    transition: transform 0.2s, filter 0.2s;
+    font-weight: 700;
+}
+
+.slider-content .btn-primary {
+    background: linear-gradient(to right, #f59e0b, #ea580c);
+}
+
+.slider-content .btn-secondary {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .slider-content .btn:hover {
-    background-color: #d84900;
+    transform: translateY(-1px);
+    filter: brightness(1.05);
 }
 
 /* Slick Dots Customization */
@@ -52,4 +71,18 @@
 
 .slick-dots li.slick-active button:before {
     color: #d84900;
+}
+
+@media (max-width: 768px) {
+    .slider-item {
+        height: 420px;
+    }
+
+    .slider-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .slider-content p {
+        font-size: 1rem;
+    }
 }
