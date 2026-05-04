@@ -130,6 +130,27 @@
     "departure": "Напускане",
     "adults": "Възрастни",
     "calculate": "Изчисли",
+    "liveEstimate": "Прогноза в реално време",
+    "summaryTitle": "Обобщение на резервацията",
+    "capacity": "Капацитет",
+    "nights": "Нощувки",
+    "extraGuestFeePerNight": "Такса за допълнителен гост / нощ",
+    "totalEstimate": "Обща прогноза",
+    "noPaymentNote": "На този етап не се изисква плащане.",
+    "finalPriceNote": "Крайната цена може да варира според наличност и избрани услуги.",
+    "validation": {
+      "nameRequired": "Моля, въведете име.",
+      "arrivalRequired": "Моля, изберете дата на настаняване.",
+      "departureRequired": "Моля, изберете дата на напускане.",
+      "adultsMin": "Необходим е поне 1 възрастен.",
+      "departureAfterArrival": "Датата на напускане трябва да е след настаняването."
+    },
+    "modal": {
+      "title": "Потвърждение на резервацията",
+      "greeting": "Здравейте,",
+      "totalPrice": "Обща цена",
+      "confirmAndClose": "Потвърди и затвори"
+    },
     "rooms": {
       "single": "Единична стая",
       "double": "Двойна стая",

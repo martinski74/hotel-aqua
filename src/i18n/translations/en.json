@@ -130,6 +130,27 @@
     "departure": "Departure",
     "adults": "Adults",
     "calculate": "Calculate",
+    "liveEstimate": "Live estimate",
+    "summaryTitle": "Booking summary",
+    "capacity": "Capacity",
+    "nights": "Nights",
+    "extraGuestFeePerNight": "Extra guest fee / night",
+    "totalEstimate": "Total estimate",
+    "noPaymentNote": "No payment is required at this stage.",
+    "finalPriceNote": "Final price may vary depending on availability and selected services.",
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "arrivalRequired": "Please choose an arrival date.",
+      "departureRequired": "Please choose a departure date.",
+      "adultsMin": "At least 1 adult is required.",
+      "departureAfterArrival": "Departure date must be after arrival."
+    },
+    "modal": {
+      "title": "Booking Confirmation",
+      "greeting": "Hello,",
+      "totalPrice": "Total Price",
+      "confirmAndClose": "Confirm & Close"
+    },
     "rooms": {
       "single": "Single Room",
       "double": "Double Room",
