@@ -35,12 +35,13 @@ export default function PricesPage() {
     textAlign: 'center',
     backgroundColor: '#f9fafb',
     fontWeight: '600',
-    color: '#374151',
+    color: '#1f2937',
   };
   const tdStyle: CSSProperties = {
     border: '1px solid #e5e7eb',
     padding: '14px 16px',
     textAlign: 'center',
+    color: '#1f2937',
   };
   const firstTdStyle: CSSProperties = {
     ...tdStyle,
@@ -54,21 +55,21 @@ export default function PricesPage() {
     <main>
       <div className="max-w-6xl mx-auto px-4 py-16">
         {/* Header */}
-        <div className="text-center mb-12">
-          <span className="font-semibold tracking-wider uppercase text-sm">{t.prices.subtitle}</span>
+        <div className="text-center mb-12 rounded-2xl border border-amber-100 bg-white/75 p-6 shadow-sm backdrop-blur-sm">
+          <span className="font-semibold tracking-wider uppercase text-sm text-orange-800">{t.prices.subtitle}</span>
           <h1 className="text-4xl font-serif text-gray-800 mt-2 mb-4">{t.prices.title}</h1>
-          <p className="text-gray-500">{t.prices.note}</p>
+          <p className="text-slate-700">{t.prices.note}</p>
         </div>
 
         {/* Season Legend */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="mb-10 flex flex-wrap justify-center gap-6 rounded-xl border border-amber-100 bg-white/70 p-4">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-gray-200"></span>
-            <span className="text-sm text-gray-600">{t.prices.regularSeason}</span>
+            <span className="text-sm font-medium text-slate-700">{t.prices.regularSeason}</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-orange-700"></span>
-            <span className="text-sm text-gray-600">{t.prices.peakSeason}</span>
+            <span className="w-3 h-3 rounded-full bg-orange-800"></span>
+            <span className="text-sm font-medium text-slate-700">{t.prices.peakSeason}</span>
           </div>
         </div>
 
@@ -84,8 +85,8 @@ export default function PricesPage() {
                 <tr className="bg-gradient-to-r from-orange-50 to-yellow-50">
                   <th style={{ ...thStyle, textAlign: 'left', backgroundColor: 'transparent' }}>{t.prices.roomType}</th>
                   {periods.map((p) => (
-                    <th key={p.key} style={{ ...thStyle, backgroundColor: p.highlight ? '#fff7ed' : 'transparent' }}>
-                      {p.highlight && <span className="inline-block w-2 h-2 bg-orange-400 rounded-full mr-2"></span>}
+                    <th key={p.key} style={{ ...thStyle, backgroundColor: p.highlight ? '#ffedd5' : 'transparent' }}>
+                      {p.highlight && <span className="inline-block w-2 h-2 bg-orange-700 rounded-full mr-2"></span>}
                       {p.label}
                     </th>
                   ))}
@@ -99,8 +100,8 @@ export default function PricesPage() {
                       {room.name}
                     </td>
                     {periods.map((p) => (
-                      <td key={p.key} style={{ ...tdStyle, backgroundColor: p.highlight ? '#fff7ed' : 'transparent' }}>
-                        <span className={p.highlight ? 'text-orange-600 font-semibold' : 'text-gray-700'}>
+                      <td key={p.key} style={{ ...tdStyle, backgroundColor: p.highlight ? '#ffedd5' : 'transparent' }}>
+                        <span className={p.highlight ? 'font-semibold text-orange-800' : 'text-slate-700'}>
                           {room.prices[p.key]} lv
                         </span>
                       </td>
@@ -124,7 +125,7 @@ export default function PricesPage() {
                 <tr className="bg-gradient-to-r from-orange-50 to-yellow-50">
                   <th style={{ ...thStyle, textAlign: 'left', backgroundColor: 'transparent' }}>{t.prices.roomType}</th>
                   {periods.map((p) => (
-                    <th key={p.key} style={{ ...thStyle, backgroundColor: p.highlight ? '#fff7ed' : 'transparent' }}>
+                    <th key={p.key} style={{ ...thStyle, backgroundColor: p.highlight ? '#ffedd5' : 'transparent' }}>
                       {p.label}
                     </th>
                   ))}
@@ -135,8 +136,8 @@ export default function PricesPage() {
                   <tr key={pkg.name} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td style={firstTdStyle}>{pkg.name}</td>
                     {periods.map((p) => (
-                      <td key={p.key} style={{ ...tdStyle, backgroundColor: p.highlight ? '#fff7ed' : 'transparent' }}>
-                        <span className={p.highlight ? 'text-orange-600 font-semibold' : 'text-gray-700'}>
+                      <td key={p.key} style={{ ...tdStyle, backgroundColor: p.highlight ? '#ffedd5' : 'transparent' }}>
+                        <span className={p.highlight ? 'font-semibold text-orange-800' : 'text-slate-700'}>
                           {pkg.prices[p.key]} lv
                         </span>
                       </td>
@@ -149,25 +150,25 @@ export default function PricesPage() {
         </section>
 
         {/* Notes */}
-        <section className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-8">
+        <section className="rounded-2xl border border-amber-100 bg-gradient-to-r from-orange-50 to-yellow-50 p-8 shadow-sm">
           <h2 className="text-xl font-serif text-gray-800 mb-4 flex items-center gap-2">
-            <i className="fa fa-info-circle text-orange-500"></i>
+            <i className="fa fa-info-circle text-orange-700"></i>
             {t.prices.importantInfo}
           </h2>
           <ul className="space-y-3">
-            <li className="flex items-start gap-3 text-gray-600">
+            <li className="flex items-start gap-3 text-slate-800">
               <i className="fa fa-check text-green-500 mt-1" aria-hidden="true"></i>
               {t.prices.priceIncludes}
             </li>
-            <li className="flex items-start gap-3 text-gray-600">
+            <li className="flex items-start gap-3 text-slate-800">
               <i className="fa fa-check text-green-500 mt-1" aria-hidden="true"></i>
               {t.prices.roomCapacity}
             </li>
-            <li className="flex items-start gap-3 text-gray-600">
-              <i className="fa fa-plus text-orange-500 mt-1" aria-hidden="true"></i>
+            <li className="flex items-start gap-3 text-slate-800">
+              <i className="fa fa-plus text-orange-700 mt-1" aria-hidden="true"></i>
               {t.prices.additionalBed}
             </li>
-            <li className="flex items-start gap-3 text-gray-600">
+            <li className="flex items-start gap-3 text-slate-800">
               <i className="fa fa-child text-green-500 mt-1" aria-hidden="true"></i>
               {t.prices.childrenFree}
             </li>
