@@ -1,6 +1,7 @@
 # Hotel Aqua
 
 Website for Hotel Aqua, a hotel located in Kiten, Bulgaria — a beautiful seaside resort on the Black Sea coast.
+The site presents the hotel's rooms, amenities, prices, and contact details, and allows guests to make booking inquiries online.
 
 ## Tech Stack
 
